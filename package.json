@@ -1,0 +1,31 @@
+{
+  "name": "complete-nodejs-guide",
+  "version": "1.0.0",
+  "description": "Complete nodejs guide",
+  "main": "app.js",
+  "engines": {
+    "node": "20.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-test": "nodemon \"./09 Dynamic Routes & Advanced Models/01-extracting-dynamic-params/app.js\""
+  },
+  "author": "Ahmed Tayseer",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "csurf": "^1.11.0",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.4.0",
+    "mongoose": "^8.2.2",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
