@@ -16,14 +16,15 @@ const io = require('./socket').init(server);
 const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.fadgj0l.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority&appName=Cluster0`;
 
 // List of allowed origins
-const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(' ');
+// const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(' ');
 
 app.use((req, res, next) => {
   // Check if the request origin is in the list of allowed origins
-  if (allowedOrigins.includes(req.headers.origin))
-    // Set the Access-Control-Allow-Origin header to the request origin
-    res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  // if (allowedOrigins.includes(req.headers.origin))
+  // Set the Access-Control-Allow-Origin header to the request origin
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
 
+  res.setHeader('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN);
   res.setHeader(
     'Access-Control-Allow-Methods',
     'OPTIONS, GET, POST, PUT, PATCH, DELETE'

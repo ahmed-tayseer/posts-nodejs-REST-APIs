@@ -1,4 +1,4 @@
-const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(' ');
+// const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(' ');
 
 let io;
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
     io = require('socket.io')(httpServer, {
       // IMP to set cors to allow it for socket also
       cors: {
-        origin: allowedOrigins,
+        origin: process.env.ALLOWED_ORIGIN,
       },
     });
     return io;
