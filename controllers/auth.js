@@ -12,6 +12,7 @@ exports.signup = async (req, res, next) => {
   const errors = validationResult(req);
   try {
     if (!errors.isEmpty()) {
+      console.log(errors);
       const err = new Error('Invalid inputs');
       err.statusCode = 422;
       throw err;

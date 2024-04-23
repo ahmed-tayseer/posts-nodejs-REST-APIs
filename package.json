@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
-    "start-test": "nodemon \"./09 Dynamic Routes & Advanced Models/01-extracting-dynamic-params/app.js\""
+    "start": "node app.js",
+    "start:dev": "nodemon app.js"
   },
   "author": "Ahmed Tayseer",
   "license": "ISC",

@@ -14,6 +14,8 @@ router.put(
       .isEmail()
       .custom((value, { req }) => {
         return User.findOne({ email: value }).then(user => {
+          console.log(value);
+          console.log(user);
           if (user) throw new Error('email exists!');
         });
       }),

@@ -1,0 +1,8 @@
+{
+  "env": {
+    "MONGO_USER": "ahmedtayseer",
+    "MONGO_PASSWORD": "D60FZKgWHblCvYDM",
+    "MONGO_DEFAULT_DATABASE": "feed",
+    "ALLOWED_ORIGINS": "https://posts-app-4ekg.onrender.com http://localhost:3000"
+  }
+}
